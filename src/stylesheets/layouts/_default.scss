@@ -1,0 +1,31 @@
+header {
+  @extend .headline;
+  @extend .l;
+  bottom: -80px;
+  height: 40px;
+  left: 0;
+  margin: 0;
+  padding: 40px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  @include linear-gradient(color-stops($light-color, white 33%, white));
+  @include transition(bottom, 1s);
+  &:hover {
+    bottom: 0;
+  }
+  small {
+    color: $medium-color;
+    display: block;
+    font-size: $small-font-size;
+  }
+}
+
+html {
+  background: $light-color;
+}
+
+body {
+  margin: auto;
+  width: 940px;
+}

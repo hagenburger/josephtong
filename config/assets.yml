@@ -1,0 +1,7 @@
+package_path: josephtong
+package_assets: <%= ARGV[0] == 'build' ? 'on' : 'off' %>
+javascript_compressor: yui
+
+javascripts:
+  josephtong:
+    - site/javascripts/josephtong.js
