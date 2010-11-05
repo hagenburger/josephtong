@@ -1,19 +1,14 @@
 #index
-  %section
-    %h2 Ante/Art
+  %section#ante-art
+    %h2 Ante/<span>Art</span>
     %nav
       %a(href="#") Paintings
       %a(href="#") Photography
       %a(href="#") Installations
-  %section
-    %h2 Ante/Interior
-    %nav
-      %a(href="#") Berlin
-      %a(href="#") London
-  %section
+  %section#ante-poetry
     %h2 Ante/Poetry
     %nav
-      %a(href="#") Moltecular
+      %a(href="#") Molecular
       %a(href="#") Moment Between Thoughts
       %a(href="#") Unholy Litanies
       %a(href="#") Soliloquoy
@@ -22,3 +17,20 @@
       %a(href="#") Re Vera
       %a(href="#") Neue
       %a(href="#") Tausend
+  %section#ante-interior
+    %h2 Ante/Interior
+    %nav
+      %a(href="#") Berlin
+      %a(href="#") London
+
+#poetry
+  = partial "poetry/molecular"
+  = partial "poetry/moment-between-thoughts"
+  = partial "poetry/unholy-litanies"
+  = partial "poetry/soliloquoy"
+  = partial "poetry/hope-struck"
+  = partial "poetry/filix"
+  = partial "poetry/echelon"
+  = partial "poetry/re-vera"
+  = partial "poetry/neue"
+  = partial "poetry/tausend"

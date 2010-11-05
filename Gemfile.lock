@@ -10,11 +10,14 @@ GEM
     jammit (0.5.3)
       closure-compiler (>= 0.1.0)
       yui-compressor (>= 0.9.1)
+    maruku (0.6.0)
+      syntax (>= 1.0.0)
     rack (1.2.1)
     staticmatic (0.11.0.alpha.10)
       compass (>= 0.10.0)
       haml (>= 2.0.0)
       rack (>= 1.0)
+    syntax (1.0.0)
     yui-compressor (0.9.1)
 
 PLATFORMS
@@ -25,4 +28,5 @@ DEPENDENCIES
   haml (~> 3.0.23)
   html5-boilerplate (~> 0.2.4)
   jammit (~> 0.5.3)
+  maruku (~> 0.6.0)
   staticmatic (= 0.11.0.alpha.10)

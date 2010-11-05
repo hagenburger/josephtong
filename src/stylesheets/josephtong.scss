@@ -17,12 +17,10 @@ $link-color: $medium-color;
 $link-visited-color: $medium-color;
 $link-hover-color: $dark-color;
 
-$base-font-family: "luxury", helvetica, arial, sans-serif;
-$headline-font-family: "luxury", helvetica, arial, sans-serif;
-//$base-font-family: "helvetica neue", helvetica, arial, sans-serif;
-//$headline-font-family: "helvetica neue", helvetica, arial, sans-serif;
+$base-font-family: "athelas-1", "athelas-2", helvetica, arial, sans-serif;
+$headline-font-family: "aviano-sans-1", "aviano-sans-2", helvetica, arial, sans-serif;
 $small-font-size: 11px;
-$base-font-size: 12px;
+$base-font-size: 14px;
 $large-font-size: 21px;
 $x-large-font-size: 30px;
 $base-line-height: 1.231;
@@ -47,3 +45,4 @@ $base-line-height: 1.231;
 
 @import "partials/intro";
 @import "partials/index";
+@import "partials/poetry";

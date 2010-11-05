@@ -1,0 +1,83 @@
+@mixin section-spacer($spacer) {
+  section {
+    margin: 4em 0;
+    + section:before {
+      content: $spacer;
+      display: block;
+      margin: 4em 0;
+    }
+  }
+}
+
+#poetry {
+  section {
+    margin: 9em 0;
+  }
+}
+
+#molecular {
+  text-align: center;
+  h3 {
+    &:after {
+      content: "~~~";
+      display: block;
+      margin-top: 1em;
+    }
+  }
+}
+
+#moment-between-thoughts {
+  header {
+    text-align: right;
+  }
+  section {
+    text-align: center;
+  }
+  h3 {
+    &:before,
+    &:after {
+      content: " ~ ";
+    }
+  }
+}
+
+#unholy-litanies {
+  @include section-spacer("@@@@@@@@@@@@@@@");
+}
+
+#soliloquoy {
+  header {
+    text-align: center;
+  }
+  @include section-spacer("***************");
+}
+
+#hope-struck {
+  text-align: right;
+  @include section-spacer("///////////////");
+}
+
+#filix {
+  header {
+    text-align: center;
+  }
+}
+
+#echelon {
+  text-align: right;
+  @include section-spacer("+++++");
+}
+
+#re-vera {
+  text-align: center;
+  header {
+    text-align: right;
+  }
+  @include section-spacer("++++");
+}
+
+#neue {
+  section p {
+    font-family: "courier new", courier, monospace;
+  }
+}

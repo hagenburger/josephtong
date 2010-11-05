@@ -3,7 +3,10 @@
 }
 
 .headline-font {
+  @extend .normal;
   font-family: $headline-font-family;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .bold {
@@ -42,10 +45,8 @@
 
 .headline {
   @extend .headline-font;
-  @extend .normal;
-  letter-spacing: 1px;
   margin: 1em 0;
-  text-transform: uppercase;
+  @include text-shadow(rgba($medium-color, .8), 0, 0, 1px)
 }
 
 body {
@@ -74,7 +75,6 @@ legend {
 
 h3,
 h4 {
-  @extend .headline;
   @extend .m;
 }
 

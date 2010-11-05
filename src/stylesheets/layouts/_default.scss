@@ -1,4 +1,4 @@
-header {
+body > header {
   @extend .headline;
   @extend .l;
   bottom: -80px;
@@ -9,7 +9,7 @@ header {
   position: fixed;
   right: 0;
   text-align: center;
-  @include linear-gradient(color-stops($light-color, white 33%, white));
+  @include linear-gradient(color-stops(rgba(white, 0), white 33%, white));
   @include transition(bottom, 1s);
   &:hover {
     bottom: 0;

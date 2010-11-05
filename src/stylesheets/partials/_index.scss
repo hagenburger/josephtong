@@ -1,12 +1,12 @@
 #index {
-  section {
-    float: left;
-    margin-top: 100px;
-    &:not(:first-child) {
-      margin-left: 187px;
-    }
+  margin-top: 200px;
+  text-align: center;
+  span {
+    margin-left: -2px;
   }
   nav {
+    position: absolute;
+    text-align: left;
     @include opacity(0);
     @include transition(opacity, 1s);
   }
@@ -14,7 +14,44 @@
     @include opacity(1);
   }
   a {
+    @extend .headline-font;
     display: block;
     line-height: 20px;
+  }
+}
+
+#ante-art {
+  float: left;
+}
+
+#ante-poetry {
+  float: right;
+}
+
+#ante-interior {
+  display: inline-block;
+}
+
+#ante-poetry,
+#ante-interior {
+  h2:before {
+    background: lighten($medium-color, 10%);
+    content: " ";
+    height: 2px;
+    margin: 15px 0 0 -167px;
+    position: absolute;
+    width: 147px;
+  }
+}
+
+#ante-interior,
+#ante-art {
+  h2:after {
+    background: lighten($medium-color, 10%);
+    content: " ";
+    height: 2px;
+    margin: 15px 0 0 20px;
+    position: absolute;
+    width: 147px;
   }
 }
