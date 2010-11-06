@@ -10,6 +10,9 @@ $(function() {
   catch(e) {}
 
   setTimeout(function() {
-    $('#intro').fadeOut();
-  }, 1500);
+    //$('#intro').fadeOut();
+    location.href = "#index";
+  }, 3500);
 });
+
+location.href = "#intro";

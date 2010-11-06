@@ -1,7 +1,7 @@
 body > header {
   @extend .headline;
   @extend .l;
-  bottom: -80px;
+  bottom: -40px;
   height: 40px;
   left: 0;
   margin: 0;
@@ -9,10 +9,11 @@ body > header {
   position: fixed;
   right: 0;
   text-align: center;
+  z-index: 99;
   @include linear-gradient(color-stops(rgba(white, 0), white 33%, white));
-  @include transition(bottom, 1s);
+  @include transition(bottom, .3s);
   &:hover {
-    bottom: 0;
+    bottom: -20px;
   }
   small {
     color: $medium-color;
@@ -28,4 +29,15 @@ html {
 body {
   margin: auto;
   width: 940px;
+}
+
+.page {
+  position: absolute;
+  visibility: hidden;
+  @include opacity(0);
+  @include transition(all, 2s);
+  &:target {
+    visibility: visible;
+    @include opacity(1);
+  }
 }

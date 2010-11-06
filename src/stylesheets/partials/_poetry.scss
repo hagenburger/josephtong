@@ -10,6 +10,10 @@
 }
 
 #poetry {
+  article {
+    @extend .page;
+    width: 940px;
+  }
   section {
     margin: 9em 0;
   }

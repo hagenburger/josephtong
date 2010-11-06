@@ -1,12 +1,15 @@
 #index {
-  margin-top: 200px;
+  @extend .page;
+  padding-top: 200px;
   text-align: center;
+  width: 940px;
   span {
     margin-left: -2px;
   }
   nav {
     position: absolute;
     text-align: left;
+    width: 300px;
     @include opacity(0);
     @include transition(opacity, 1s);
   }
