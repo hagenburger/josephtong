@@ -14,6 +14,10 @@
     @extend .page;
     width: 940px;
   }
+  header {
+    min-height: 14em;
+    padding: 200px 0 8em;
+  }
   section {
     margin: 9em 0;
   }
@@ -46,7 +50,7 @@
 }
 
 #unholy-litanies {
-  @include section-spacer("@@@@@@@@@@@@@@@");
+  //@include section-spacer("@@@@@@@@@@@@@@@");
 }
 
 #soliloquoy {

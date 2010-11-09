@@ -1,4 +1,4 @@
-package_path: josephtong
+package_path: javascripts
 package_assets: <%= ARGV[0] == 'build' ? 'on' : 'off' %>
 javascript_compressor: yui
 

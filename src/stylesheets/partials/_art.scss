@@ -1,0 +1,21 @@
+#art {
+  article {
+    @extend .page;
+    padding-top: 100px;
+  }
+  figure {
+    float: left;
+    width: 780px;
+  }
+  .previous,
+  .next {
+    float: left;
+    font-size: 80px;
+    margin: 170px 20px 0 0;
+    width: 60px;
+  }
+  .next {
+    margin: 170px 0 0 20px;
+    text-align: right;
+  }
+}

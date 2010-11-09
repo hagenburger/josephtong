@@ -1,4 +1,5 @@
 body > header {
+  $footer-color: darken($light-color, 10%);
   @extend .headline;
   @extend .l;
   bottom: -40px;
@@ -10,7 +11,7 @@ body > header {
   right: 0;
   text-align: center;
   z-index: 99;
-  @include linear-gradient(color-stops(rgba(white, 0), white 33%, white));
+  @include linear-gradient(color-stops(rgba($footer-color, 0), $footer-color 33%, $footer-color));
   @include transition(bottom, .3s);
   &:hover {
     bottom: -20px;
@@ -19,6 +20,9 @@ body > header {
     color: $medium-color;
     display: block;
     font-size: $small-font-size;
+    a + a:before {
+      content: "· ";
+    }
   }
 }
 

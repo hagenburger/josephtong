@@ -2,9 +2,9 @@
   %section#ante-art
     %h2 Ante/<span>Art</span>
     %nav
-      %a(href="#") Paintings
-      %a(href="#") Photography
-      %a(href="#") Installations
+      %a(href="#paintings") Paintings
+      %a(href="#photography") Photography
+      %a(href="#installations") Installations
   %section#ante-poetry
     %h2 Ante/Poetry
     %nav
@@ -22,6 +22,9 @@
     %nav
       %a(href="#") Berlin
       %a(href="#") London
+
+#art
+  = partial "art/photography"
 
 #poetry
   = partial "poetry/molecular"
