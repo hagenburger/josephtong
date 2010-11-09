@@ -1,25 +1,36 @@
 body > header {
-  $footer-color: darken($light-color, 10%);
   @extend .headline;
-  @extend .l;
+  @extend .ml;
   bottom: -40px;
   height: 40px;
   left: 0;
   margin: 0;
-  padding: 40px;
+  padding: 80px 0 40px;
   position: fixed;
   right: 0;
   text-align: center;
   z-index: 99;
-  @include linear-gradient(color-stops(rgba($footer-color, 0), $footer-color 33%, $footer-color));
+  @include linear-gradient(color-stops(
+    rgba(darken($light-color, 30%), 0),
+    darken($light-color, 30%) 33%,
+    darken($light-color, 60%)
+  ));
   @include transition(bottom, .3s);
   &:hover {
-    bottom: -20px;
+    bottom: 0;
+  }
+  a,
+  a:visited {
+    color: white;
+    &:hover {
+      color: darken($light-color, 10%);
+    }
   }
   small {
     color: $medium-color;
     display: block;
     font-size: $small-font-size;
+    margin-top: 20px;
     a + a:before {
       content: "· ";
     }
