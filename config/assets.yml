@@ -4,4 +4,4 @@ javascript_compressor: yui
 
 javascripts:
   josephtong:
-    - site/javascripts/josephtong.js
+    - site/javascripts/application.js

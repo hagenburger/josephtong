@@ -15,7 +15,7 @@ body > header {
     darken($light-color, 30%) 33%,
     darken($light-color, 60%)
   ));
-  @include transition(bottom, .3s);
+  @include transition(bottom, 1s);
   &:hover {
     bottom: 0;
   }
