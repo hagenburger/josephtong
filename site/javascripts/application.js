@@ -49,5 +49,8 @@ $(function() {
   
   setTimeout(function() {
     $('#intro').fadeOut();
+    if (!location.hash) {
+      location.hash = "#index";
+    }
   }, 5500);
 });
