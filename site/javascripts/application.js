@@ -66,8 +66,7 @@ $(function() {
       zIndex: 100
     });
     next.hide().css({
-      zIndex: 101//,
-    //}).animate({ opacity: 1 }, function() {
+      zIndex: 101
     }).fadeIn(function() {
       current.hide();
     });
