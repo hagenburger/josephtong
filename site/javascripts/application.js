@@ -64,6 +64,8 @@ $(function() {
       })
     });
   }
+  
+  $('#poetry header').css({ height: $(window).height() - 350 + 'px' });
 });
 
 (function($) {
