@@ -1,4 +1,3 @@
-
 try {
   Typekit.load();
 }
@@ -47,38 +46,44 @@ $(function() {
       if (!location.hash) {
         location.hash = "#index";
       }
-    }, 500);
+    }, 5500);
   });
   $(window).bind('resize', resizeImg);
   
-  var photos = $('#photography img'), currentPhoto = 0, photoCount = photos.length;
-  var showPhoto = function(nextPhoto) {
-    console.log(nextPhoto);
-    if (nextPhoto == photoCount) {
-      nextPhoto = 0;
-    }
-    else if (nextPhoto < 0) {
-      nextPhoto = photoCount - 1;
-    }
-    var current = photos.eq(currentPhoto),
-        next = photos.eq(nextPhoto);
-    current.css({
-      zIndex: 100
-    });
-    next.hide().css({
-      zIndex: 101
-    }).fadeIn(function() {
-      current.hide();
-    });
-    currentPhoto = nextPhoto;
-  };
-  photos.hide().eq(0).show();
-  $('.next').click(function() {
-    showPhoto(currentPhoto + 1);
-    return false;
-  });
-  $('.previous').click(function() {
-    showPhoto(currentPhoto - 1);
-    return false;
-  });
+  $('#photography').slideshow();
+  $('#art').slideshow();
 });
+
+(function($) {
+  $.fn.slideshow = function() {
+    var images = $(this).find('img'), currentImage = 0, imageCount = images.length;
+    var showImage = function(nextImage) {
+      if (nextImage == imageCount) {
+        nextImage = 0;
+      }
+      else if (nextImage < 0) {
+        nextImage = imageCount - 1;
+      }
+      var current = images.eq(currentImage),
+          next = images.eq(nextImage);
+      current.css({
+        zIndex: 100
+      });
+      next.hide().css({
+        zIndex: 101
+      }).fadeIn(function() {
+        current.hide();
+      });
+      currentImage = nextImage;
+    };
+    images.hide().eq(0).show();
+    $(this).find('.next').click(function() {
+      showImage(currentImage + 1);
+      return false;
+    });
+    $(this).find('.previous').click(function() {
+      showImage(currentImage - 1);
+      return false;
+    });
+  };
+})(jQuery);

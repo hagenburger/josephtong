@@ -21,6 +21,7 @@
     width: 60px;
     @include hide-text;
     @include opacity(.3);
+    @include transition(opacity, .5);
     &:hover {
       color: $medium-color;
       @include opacity(1);
