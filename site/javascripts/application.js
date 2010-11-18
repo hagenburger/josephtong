@@ -51,7 +51,7 @@ $(function() {
   $(window).bind('resize', resizeImg);
   
   $('#photography').slideshow();
-  $('#art').slideshow();
+  $('#paintings').slideshow();
 });
 
 (function($) {

@@ -4,7 +4,7 @@
     %nav
       %a(href="#paintings") Paintings
       %a(href="#photography") Photography
-      %a(href="#installations") Installations
+      -#%a(href="#installations") Installations
   %section#ante-poetry
     %h2 Ante/Poetry
     %nav
@@ -24,6 +24,7 @@
       %a(href="#") London
 
 #art
+  = partial "art/paintings"
   = partial "art/photography"
 
 #poetry

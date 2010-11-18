@@ -1,7 +1,6 @@
 #art {
   article {
     @extend .page;
-    padding-top: 100px;
     position: relative;
   }
   figure {
@@ -14,10 +13,10 @@
   .next {
     background: image-url("layout/previous.png");
     color: lighten($medium-color, 20%);
-    float: left;
     font-size: 80px;
     height: 120px;
-    margin: 170px 20px 0 0;
+    position: absolute;
+    top: 270px;
     width: 60px;
     @include hide-text;
     @include opacity(.3);
@@ -29,6 +28,6 @@
   }
   .next {
     background: image-url("layout/next.png");
-    margin: 170px 0 0 800px;
+    right: 0;
   }
 }
