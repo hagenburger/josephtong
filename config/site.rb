@@ -9,7 +9,7 @@ configuration.haml_options = {
   :attr_wrapper => '"'
 }
 
-configuration.preview_server_port = 3111
+configuration.preview_server_port = 3113
 
 ROOT = File.dirname(__FILE__)
 JAVASCRIPTS_PATH = File.join(ROOT, 'site', 'javascripts')

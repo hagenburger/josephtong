@@ -47,7 +47,39 @@ $(function() {
       if (!location.hash) {
         location.hash = "#index";
       }
-    }, 5500);
+    }, 500);
   });
   $(window).bind('resize', resizeImg);
+  
+  var photos = $('#photography img'), currentPhoto = 0, photoCount = photos.length;
+  var showPhoto = function(nextPhoto) {
+    console.log(nextPhoto);
+    if (nextPhoto == photoCount) {
+      nextPhoto = 0;
+    }
+    else if (nextPhoto < 0) {
+      nextPhoto = photoCount - 1;
+    }
+    var current = photos.eq(currentPhoto),
+        next = photos.eq(nextPhoto);
+    current.css({
+      zIndex: 100
+    });
+    next.hide().css({
+      zIndex: 101//,
+    //}).animate({ opacity: 1 }, function() {
+    }).fadeIn(function() {
+      current.hide();
+    });
+    currentPhoto = nextPhoto;
+  };
+  photos.hide().eq(0).show();
+  $('.next').click(function() {
+    showPhoto(currentPhoto + 1);
+    return false;
+  });
+  $('.previous').click(function() {
+    showPhoto(currentPhoto - 1);
+    return false;
+  });
 });
