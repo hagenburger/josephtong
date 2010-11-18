@@ -1,0 +1,26 @@
+#contact {
+  @extend .page;
+  padding-top: 100px;
+  width: 940px;
+  .address {
+    float: left;
+    width: 33%;
+    + .address {
+      text-align: center;
+      + .address {
+        text-align: right;
+      }
+    }
+  }
+  p {
+    margin: 2em 0;
+  }
+  address {
+    font-style: normal;
+  }
+  .created-by {
+    clear: both;
+    padding-top: 3em;
+    text-align: center;
+  }
+}

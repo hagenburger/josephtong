@@ -46,7 +46,7 @@ $(function() {
       if (!location.hash) {
         location.hash = "#index";
       }
-    }, 5500);
+    }, 500);
   });
   $(window).bind('resize', resizeImg);
   
