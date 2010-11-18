@@ -11,13 +11,8 @@ body > header {
   right: 0;
   text-align: center;
   z-index: 99;
-  //@include linear-gradient(color-stops(
-  //  rgba(darken($light-color, 30%), 0),
-  //  darken($light-color, 30%) 33%,
-  //  darken($light-color, 60%)
-  //));
   @include transition(bottom, 1s);
-  &:hover {
+  .csstransitions &:hover {
     bottom: 0;
   }
   a,
@@ -40,6 +35,7 @@ body > header {
 
 html {
   background: $light-color image-url("layout/background.png");
+  overflow-x: hidden;
 }
 
 body {

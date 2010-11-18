@@ -52,6 +52,18 @@ $(function() {
   
   $('#photography').slideshow();
   $('#paintings').slideshow();
+  
+  if (!Modernizr.csstransitions) {
+    $('header').mouseenter(function() {
+      $(this).animate({
+        bottom: 0
+      });
+    }).mouseleave(function() {
+      $(this).animate({
+        bottom: '-40px'
+      })
+    });
+  }
 });
 
 (function($) {
