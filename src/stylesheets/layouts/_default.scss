@@ -1,6 +1,7 @@
 body > header {
   @extend .headline;
   @extend .ml;
+  background: image-url("layout/gradient.png");
   bottom: -40px;
   height: 40px;
   left: 0;
@@ -10,11 +11,11 @@ body > header {
   right: 0;
   text-align: center;
   z-index: 99;
-  @include linear-gradient(color-stops(
-    rgba(darken($light-color, 30%), 0),
-    darken($light-color, 30%) 33%,
-    darken($light-color, 60%)
-  ));
+  //@include linear-gradient(color-stops(
+  //  rgba(darken($light-color, 30%), 0),
+  //  darken($light-color, 30%) 33%,
+  //  darken($light-color, 60%)
+  //));
   @include transition(bottom, 1s);
   &:hover {
     bottom: 0;
@@ -38,7 +39,7 @@ body > header {
 }
 
 html {
-  background: $light-color;
+  background: $light-color image-url("layout/background.png");
 }
 
 body {

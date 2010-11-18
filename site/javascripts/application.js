@@ -39,18 +39,15 @@ $(function() {
       introImage = introImages[Math.floor(Math.random() * introImages.length)],
       img = $('#intro img');
   img.attr('src', 'images/intro/' + introImage + '.jpg');
-  img.load(resizeImg);
-  $(window).bind('resize', resizeImg);
-  $('#intro').css({
-    display: 'block',
-    opacity: 1,
-    visibility: 'visible'
+  img.load(function() { 
+    resizeImg();
+    img.animate({ opacity: 1 }, 2000);
+    setTimeout(function() {
+      $('#intro').fadeOut();
+      if (!location.hash) {
+        location.hash = "#index";
+      }
+    }, 5500);
   });
-  
-  setTimeout(function() {
-    $('#intro').fadeOut();
-    if (!location.hash) {
-      location.hash = "#index";
-    }
-  }, 5500);
+  $(window).bind('resize', resizeImg);
 });
