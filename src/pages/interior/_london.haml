@@ -1,0 +1,6 @@
+%article#london
+  %a.previous(href="#") &lt;
+  - images_in('london/*.jpg').each do |image|
+    %figure
+      = img "london/#{image}"
+  %a.next(href="#") &gt;

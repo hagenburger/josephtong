@@ -20,14 +20,17 @@
   %section#ante-interior
     %h2 Ante/Interior
     %nav
-      %a(href="#") Berlin
-      %a(href="#") London
+      -#%a(href="#berlin") Berlin
+      %a(href="#london") London
 
 = partial "contact"
 
 #art
   = partial "art/paintings"
   = partial "art/photography"
+
+#interior
+  = partial "interior/london"
 
 #poetry
   = partial "poetry/molecular"

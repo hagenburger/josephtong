@@ -46,12 +46,13 @@ $(function() {
       if (!location.hash) {
         location.hash = "#index";
       }
-    }, 500);
+    }, 3000);
   });
   $(window).bind('resize', resizeImg);
   
   $('#photography').slideshow();
   $('#paintings').slideshow();
+  $('#london').slideshow();
   
   if (!Modernizr.csstransitions) {
     $('header').mouseenter(function() {
@@ -70,7 +71,7 @@ $(function() {
 
 (function($) {
   $.fn.slideshow = function() {
-    var images = $(this).find('img'), currentImage = 0, imageCount = images.length;
+    var images = $(this).find('figure'), currentImage = 0, imageCount = images.length;
     var showImage = function(nextImage) {
       if (nextImage == imageCount) {
         nextImage = 0;
@@ -81,10 +82,10 @@ $(function() {
       var current = images.eq(currentImage),
           next = images.eq(nextImage);
       current.css({
-        zIndex: 100
+        zIndex: 10
       });
       next.hide().css({
-        zIndex: 101
+        zIndex: 11
       }).fadeIn(function() {
         current.hide();
       });

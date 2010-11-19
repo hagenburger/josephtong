@@ -1,18 +1,45 @@
 #contact {
   @extend .page;
+  @extend .headline-font;
   padding-top: 100px;
   width: 940px;
   .address {
     float: left;
     width: 33%;
+    h2 {
+      display: inline-block;
+    }
+    h2:after {
+      background: lighten($medium-color, 10%);
+      content: " ";
+      height: 2px;
+      margin: 15px 0 0 20px;
+      position: absolute;
+      width: 147px;
+    }
     + .address {
       text-align: center;
+      h2:before {
+        background: lighten($medium-color, 10%);
+        content: " ";
+        height: 2px;
+        margin: 15px 0 0 -167px;
+        position: absolute;
+        width: 147px;
+      }
       + .address {
         text-align: right;
+        h2:after {
+          display: none;
+        }
       }
     }
+    a {
+      color: inherit;
+    } 
   }
   p {
+    @extend .headline-font;
     margin: 2em 0;
   }
   address {
