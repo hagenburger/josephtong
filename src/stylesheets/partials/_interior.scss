@@ -21,11 +21,11 @@
     top: 310px;
     width: 60px;
     @include hide-text;
-    @include opacity(.3);
+    @include opacity(.15);
     @include transition(opacity, .5);
     &:hover {
       color: $medium-color;
-      @include opacity(1);
+      @include opacity(.5);
     }
   }
   .next {

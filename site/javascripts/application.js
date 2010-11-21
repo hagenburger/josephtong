@@ -83,7 +83,7 @@ $(function() {
           next = images.eq(nextImage);
       current.css({
         zIndex: 10
-      });
+      }).fadeOut();
       next.hide().css({
         zIndex: 11
       }).fadeIn(function() {
