@@ -1,10 +1,13 @@
+require 'digest/md5'
+
 module JammitHelper
 
   def javascripts(*packages)
     packages.map do |pack|
       if Jammit.package_assets
+        digest = Digest::MD5.hexdigest(File.read("site" + Jammit.asset_url(pack, :js)))
         url = current_page_relative_path + Jammit.asset_url(pack, :js)[1..-1]
-        %Q(<script src="#{url}"></script>
+        %Q(<script src="#{url}?#{digest[0..6]}"></script>
 )
       else
         Jammit.packager.individual_urls(pack.to_sym, :js).map do |file|
