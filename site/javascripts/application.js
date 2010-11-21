@@ -9,6 +9,8 @@ $(function() {
   }
   catch(e) {}
   
+  var currentPage = $(location.hash);
+
   var imgHeight, imgWidth;
   function resizeImg() {
     var windowHeight = $(window).height(),
@@ -43,7 +45,10 @@ $(function() {
     img.animate({ opacity: 1 }, 2000);
     setTimeout(function() {
       $('#intro').fadeOut();
-      if (!location.hash) {
+      if (location.hash) {
+        currentPage.fadeIn(2000);
+      }
+      else {
         location.hash = "#index";
       }
     }, 3000);
@@ -67,6 +72,29 @@ $(function() {
   }
   
   $('#poetry header').css({ height: $(window).height() - 350 + 'px' });
+
+  var setContactMinHight = function() {
+    $('#contact').css({ minHeight: $(window).height() - 250 });
+  };
+  $(window).bind('resize', setContactMinHight);
+  setContactMinHight();
+  
+  var switchPage = function() {
+    currentPage.fadeOut(2000);
+    currentPage = $(location.hash);
+    currentPage.fadeIn(2000);
+  };
+  $(window).bind('hashchange', switchPage);
+  
+  if (!Modernizr.hashchange) {
+    var lastHash = location.hash;
+    setInterval(function() {
+      if (lastHash != location.hash) {
+        lastHash = location.hash;
+        switchPage();
+      }
+    }, 100);
+  }
 });
 
 (function($) {

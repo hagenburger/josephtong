@@ -45,11 +45,5 @@ body {
 
 .page {
   position: absolute;
-  visibility: hidden;
-  @include opacity(0);
-  @include transition(all, 2s);
-  &:target {
-    visibility: visible;
-    @include opacity(1);
-  }
+  display: none;
 }
