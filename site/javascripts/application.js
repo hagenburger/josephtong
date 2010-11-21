@@ -71,7 +71,7 @@ $(function() {
     });
   }
   
-  $('#poetry header').css({ height: $(window).height() - 350 + 'px' });
+  $('#poetry header').css({ minHeight: $(window).height() - 350 + 'px' });
 
   var setContactMinHight = function() {
     $('#contact').css({ minHeight: $(window).height() - 250 });
