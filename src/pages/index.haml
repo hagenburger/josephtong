@@ -2,7 +2,13 @@
   %section#ante-art
     %h2 Ante/<span>Art</span>
     %nav
-      %a(href="#paintings") Paintings
+      %span Paintings
+      %nav
+        %a(href="#solus") Solus
+        %a(href="#abeo") Abeo
+        %a(href="#existentia") Existentia
+        %a(href="#anon") Anon
+        %a(href="#pulpa") Pulpa
       %a(href="#photography") Photography
       -#%a(href="#installations") Installations
   %section#ante-poetry
@@ -27,7 +33,11 @@
 = partial "contact"
 
 #art
-  = partial "art/paintings"
+  = partial "art/abeo"
+  = partial "art/solus"
+  = partial "art/existentia"
+  = partial "art/pulpa"
+  = partial "art/anon"
   = partial "art/photography"
 
 #interior

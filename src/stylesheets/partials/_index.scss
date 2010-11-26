@@ -13,14 +13,32 @@
     width: 300px;
     @include opacity(0);
     @include transition(opacity, 1s);
+    nav {
+      position: static;
+      margin-left: 20px;
+      width: auto;
+      @include opacity(1);
+      + a {
+        margin-top: 10px;
+      }
+      a {
+        &:before {
+          content: "– ";
+        }
+      }
+    }
+    a,
+    span {
+      @extend .headline-font;
+      display: block;
+      line-height: 20px;
+    }
+    span {
+      color: $link-color;
+    }
   }
   section:hover nav {
     @include opacity(1);
-  }
-  a {
-    @extend .headline-font;
-    display: block;
-    line-height: 20px;
   }
 }
 

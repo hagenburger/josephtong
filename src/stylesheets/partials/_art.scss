@@ -1,14 +1,15 @@
 #art {
   article {
     @extend .page;
-    position: relative;
+    left: 0;
+    width: 100%;
   }
   figure {
-    left: 80px;
+    left: 0;
     position: absolute;
     text-align: center;
-    top: 100px;
-    width: 780px;
+    top: 60px;
+    width: 100%;
   }
   .previous,
   .next {
@@ -16,9 +17,12 @@
     color: lighten($medium-color, 20%);
     font-size: 80px;
     height: 120px;
+    left: 20px;
+    margin-top: -60px;
     position: absolute;
-    top: 270px;
+    top: 50%;
     width: 60px;
+    z-index: 999;
     @include hide-text;
     @include opacity(.3);
     @include transition(opacity, .5);
@@ -29,6 +33,17 @@
   }
   .next {
     background: image-url("layout/next.png");
-    right: 0;
+    left: auto;
+    right: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    @extend .headline-font;
+    margin-top: 10px;
+  }
+  p {
+    margin: 0;
   }
 }

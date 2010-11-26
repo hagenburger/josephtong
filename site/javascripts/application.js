@@ -60,7 +60,10 @@ $(function() {
   $(window).bind('resize', resizeImg);
   
   $('#photography').slideshow();
-  $('#paintings').slideshow();
+  $('#abeo').slideshow();
+  $('#existentia').slideshow();
+  $('#pulpa').slideshow();
+  $('#solus').slideshow();
   $('#london').slideshow();
   
   if (!Modernizr.csstransitions) {
@@ -106,6 +109,15 @@ $(function() {
       img.attr('src', img.attr('data-src'));
     });
   }, 1000);
+  
+  var adjustGalleries = function() {
+    var height = $(window).height();
+    $('#art').css({ height: height - 40 + 'px' })
+    $('#art article').css({ height: height - 40 + 'px' })
+    $('#art img').css({ height: height - 200 + 'px' })
+  };
+  $(window).bind('resize', adjustGalleries);
+  adjustGalleries();
 });
 
 (function($) {
