@@ -90,3 +90,19 @@
   }
   @include section-spacer("-");
 }
+
+#nebula {
+  header {
+    float: right;
+  }
+  h1,
+  h2 {
+    clear: both;
+    float: left;
+    text-indent: 50px;
+  }
+  section p {
+    clear: both;
+    font-family: "courier new", courier, monospace;
+  }
+}

@@ -2,5 +2,5 @@
   %a.previous(href="#") &lt;
   - images_in('paintings/*.jpg').each do |image|
     %figure
-      = img "paintings/#{image}"
+      %img(data-src="#{current_page_relative_path}images/paintings/#{image}")
   %a.next(href="#") &gt;

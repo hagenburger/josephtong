@@ -1,13 +1,4 @@
-try {
-  Typekit.load();
-}
-catch(e) {}
-
 $(function() {
-  try {
-    Typekit.load();
-  }
-  catch(e) {}
   
   var currentPage = $(location.hash);
 
@@ -36,6 +27,19 @@ $(function() {
     });
   }
 
+  var tryToLoadTypeKit = function() {
+    try {
+      Typekit.load();
+    }
+    catch(e) {
+      setTimeout(tryToLoadTypeKit, 200);
+    }
+  }
+  setTimeout(function() {
+    $('head').append('<script src="//use.typekit.com/ith3lis.js"><' + '/script>');
+    tryToLoadTypeKit();
+  });
+  
   var introImages = [1, 14, 19, 25, 30],
       introImage = introImages[Math.floor(Math.random() * introImages.length)],
       img = $('#intro img');
@@ -95,6 +99,13 @@ $(function() {
       }
     }, 100);
   }
+  
+  setTimeout(function() {
+    $('[data-src]').each(function() {
+      var img = $(this);
+      img.attr('src', img.attr('data-src'));
+    });
+  }, 1000);
 });
 
 (function($) {

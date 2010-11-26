@@ -182,8 +182,8 @@ FileETag None
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} !^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ http://www.josephtong.de/$1 [R=301,L]
 </IfModule>
 
 # without -MultiViews, Apache will give a 404 for a rewrite if a folder of the same name does not exist 
