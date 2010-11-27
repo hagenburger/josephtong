@@ -115,6 +115,9 @@ $(function() {
     $('#art').css({ height: height - 40 + 'px' })
     $('#art article').css({ height: height - 40 + 'px' })
     $('#art img').css({ height: height - 200 + 'px' })
+    $('#interior').css({ height: height - 40 + 'px' })
+    $('#interior article').css({ height: height - 40 + 'px' })
+    $('#interior img').css({ height: height - 200 + 'px' })
   };
   $(window).bind('resize', adjustGalleries);
   adjustGalleries();

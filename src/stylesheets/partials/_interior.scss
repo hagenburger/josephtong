@@ -1,5 +1,6 @@
 #interior {
-  article {
+  @extend #art;
+/*  article {
     @extend .page;
     position: relative;
   }
@@ -33,4 +34,4 @@
     margin: 0;
     right: -10px;
   }
-}
+*/}
