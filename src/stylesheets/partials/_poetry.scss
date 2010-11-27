@@ -1,10 +1,14 @@
-@mixin section-spacer($spacer) {
+@mixin section-spacer($spacer, $align: false) {
   section {
     margin: 4em 0;
     + section:before {
       content: $spacer;
       display: block;
       margin: 4em 0;
+      @if $align {
+        text-align: $align;
+        width: 100%;
+      }
     }
   }
 }
@@ -62,7 +66,7 @@
 
 #hope-struck {
   text-align: right;
-  @include section-spacer("///////////////");
+  @include section-spacer("///////////////", right);
 }
 
 #filix {
@@ -73,7 +77,7 @@
 
 #echelon {
   text-align: right;
-  @include section-spacer("+++++");
+  @include section-spacer("+++++", right);
 }
 
 #re-vera {
@@ -81,7 +85,7 @@
   header {
     text-align: right;
   }
-  @include section-spacer("++++");
+  @include section-spacer("++++", center);
 }
 
 #neue {
